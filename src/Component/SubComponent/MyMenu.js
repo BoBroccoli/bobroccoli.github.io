@@ -9,7 +9,7 @@ const MyMenu = (props) => {
     onClose={props.onClose}
   >
     {props.myMenuItems.map(item => (
-      <MenuItem key={item.id} onClick={props.handleMenuClose}>{item.label}</MenuItem>
+      <MenuItem key={item.id} onClick={props.handleMenuClose} sx={{color: 'primary.main'}}>{item.label}</MenuItem>
     ))}
   </Menu>
   )

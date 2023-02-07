@@ -10,5 +10,9 @@ export const MyServicesMenuItems = [
     {
         id:2,
         label:'House Service'
+    },
+    {
+        id:3,
+        label:'Immigration Consult'
     }
 ]

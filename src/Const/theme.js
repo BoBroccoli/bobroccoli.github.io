@@ -2,16 +2,23 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
     palette: {
         primary: {
-            main: '#E4E5E6' // Light white
+            main: '#00FFFF', // cyan color
+            secondary: '#3AA14F' // Green
         },
         secondary: {
             main: '#3AA14F' // Green
+        },
+        third: {
+            main: '#FFFFFF' // Light white
         },
         bg: {
             main: '#424C55' //Dark grey
         },
         bg_secondary: {
             main: '#86909C' //lighter grey
+        },
+        menu_grey: {
+            main: '#585858' //grey white
         }
     },
     typography: {
@@ -30,9 +37,16 @@ export const theme = createTheme({
         MuiMenu: {
             styleOverrides: {
                 list: {
-                    backgroundColor: '#E4E5E6'
+                    backgroundColor: '#585858',
                 }
             }
-        }
+        },
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                    color: '#00FFFF',
+                }
+            }
+        },
       },
 });

@@ -1,79 +1,20 @@
 import { Toolbar, IconButton, Button } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
-import MuiAppBar from '@mui/material/AppBar';
+import AppBar from '@mui/material/AppBar';
 import { Box } from '@mui/system';
 import React, { useEffect, useState } from 'react'
 import { AboutMeMenuItems } from '../MenuGroup/AboutMeMenuItems';
 import { MyServicesMenuItems } from '../MenuGroup/MyServiceMenuItems';
 import Link from '@mui/material/Link';
 import MyMenu from './SubComponent/MyMenu';
-import Drawer from '@mui/material/Drawer';
 import { styled, useTheme } from '@mui/material/styles';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-
-const drawerWidth = 240;
-
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginLeft: 0,
-    }),
-  }),
-);
-
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: `${drawerWidth}px`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
-
-const DrawerHeader = styled('div')(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
-}));
+import MobileDrawer from './SubComponent/MobileDrawer';
 
 const rightLink = {
   fontSize: 16,
-  color: 'common.white',
   ml: 3,
 };
 export default function MyAppBar(props) {
-  const drawerOpen = props.drawerOpen
   const [myServiceMenuOpen, setMyServiceMenuOpen] = useState(false);
   const [myServiceMenuAnchorEl, setMyServiceMenuAnchorEl] = useState(null);
   //For mobile
@@ -106,8 +47,8 @@ export default function MyAppBar(props) {
   const theme = useTheme();
   return (
     <>
-    <AppBar position='fixed' open={drawerOpen}>
-      <Toolbar sx={{ justifyContent: 'space-between', background: '#424C55', height:'80px'}}>
+    <AppBar position='fixed' open={drawOpen}>
+      <Toolbar sx={{ justifyContent: 'space-between', background: theme.palette.bg.main, height:'80px'}}>
           {props.isMobile ? <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -145,11 +86,10 @@ export default function MyAppBar(props) {
             </Box>
             <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
               <Link
-                color="inherit"
                 variant="h6"
                 underline="none"
                 href="/"
-                sx={rightLink}
+                sx={{...rightLink}}
               >
                 {'Sign In'}
               </Link>
@@ -157,7 +97,7 @@ export default function MyAppBar(props) {
                 variant="h6"
                 underline="none"
                 href="/"
-                sx={{ ...rightLink, color: 'secondary.main' }}
+                sx={{...rightLink }}
               >
                 {'Sign Up'}
               </Link>
@@ -167,50 +107,7 @@ export default function MyAppBar(props) {
           }
       </Toolbar>
     </AppBar>
-    <Drawer
-        sx={{
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="persistent"
-        anchor="left"
-        open={drawOpen}
-      >
-        <DrawerHeader>
-          <IconButton onClick={()=>{setDrawOpen(false)}}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
-            <ListItem key={text} disablePadding>
-              <ListItemButton>
-                <ListItemIcon>
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
+    <MobileDrawer drawOpen={drawOpen} setDrawOpen={setDrawOpen}/>
   </>
   )
 }

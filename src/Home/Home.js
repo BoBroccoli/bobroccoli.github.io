@@ -13,8 +13,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 function Home() {
   const isMobile = useMediaQuery('(max-width:977px)');
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
   const [talks, updateTalks] = useState([{ day: dayjs('2022-10-30 09:30'), description: "", firstName: "Kevin", lastName: "Zhang", reasons: ['Car related questions'] },
   { day: dayjs('2022-10-30 10:30'), description: "I just want to know you...", firstName: "Josh", lastName: "Sky", reasons: ['Other'] },
   { day: dayjs('2022-10-30 09:30'), description: "", firstName: "Kevin", lastName: "Zhang", reasons: ['Car related questions'] },
@@ -26,12 +24,6 @@ function Home() {
 
   const[currentPage, setCurrentPage] = useState('Talk');
 
-  function openDrawerHook() {
-    setDrawerOpen(true);
-  }
-  function updateDrawerOpenHook(value) {
-    setDrawerOpen(value);
-  }
   function updateTalksHook(newTalks) {
     updateTalks(newTalks);
     setShowAlert(true);
@@ -58,8 +50,8 @@ function Home() {
   }
   return (
     <Box sx={{ display: 'flex' }}>
-      <MyAppBar isMobile={isMobile} drawerOpen={drawerOpen} openDrawerHook={openDrawerHook} talks={talks} updateTalks={updateTalksHook} />
-      {renderSwitch(currentPage)}
+      <MyAppBar isMobile={isMobile} talks={talks} updateTalks={updateTalksHook} />
+      {/* {renderSwitch(currentPage)} */}
       <Fade in={showAlert} timeout={1000}><Alert
         sx={{ position: 'fixed', bottom: 50, right: 50 }}
         iconMapping={{
