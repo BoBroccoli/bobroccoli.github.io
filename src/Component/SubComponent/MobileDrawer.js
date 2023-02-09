@@ -13,13 +13,9 @@ import ListItemText from '@mui/material/ListItemText';
 import { Box } from '@mui/system';
 import Link from '@mui/material/Link';
 import { DrawerMenuItems } from '../../MenuGroup/DrawerMenuItems';
+import { DrawerHeader } from './DrawerHeader';
+
 const drawerWidth = 340;
-const DrawerHeader = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    minHeight: '79px!important'
-  }));
 const MobileDrawer = (props) => {
     const theme = useTheme();
   return (

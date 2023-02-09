@@ -7,7 +7,7 @@ import { AboutMeMenuItems } from '../MenuGroup/AboutMeMenuItems';
 import { MyServicesMenuItems } from '../MenuGroup/MyServiceMenuItems';
 import Link from '@mui/material/Link';
 import MyMenu from './SubComponent/MyMenu';
-import { styled, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import MobileDrawer from './SubComponent/MobileDrawer';
 
 const rightLink = {
@@ -39,27 +39,20 @@ export default function MyAppBar(props) {
     setAboutMeMenuOpenAnchorEl(null);
     setAboutMeMenuOpen(false);
   }
-  //reset the my_service and about_me menus if they are opened, side effect runs when props.isMobile is changed 
-  useEffect(() => {
-    handleMyServiceMenuClose();
-    handleAboutMeMenuClose();
-  }, [props.isMobile]);
   const theme = useTheme();
   return (
     <>
-    <AppBar position='fixed' open={drawOpen}>
+    <AppBar open={drawOpen} position='static'>
       <Toolbar sx={{ justifyContent: 'space-between', background: theme.palette.bg.main, height:'80px'}}>
-          {props.isMobile ? <IconButton
+          <IconButton
               color="inherit"
               aria-label="open drawer"
               onClick={()=>{setDrawOpen(true)}}
               edge="start"
-              sx={{ mr: 2, ...(drawOpen) }}
+              sx={{ mr: 2, ...(drawOpen), display: {sx:'block', sm: 'block', md: 'none'} }}
             >
             <MenuIcon sx={{fontSize: "2rem"}}/>
           </IconButton>
-          : null
-          }
           <Box sx={{ display: 'flex', flex: 1, justifyContent: 'center'}}>
             <Link
               variant="h6"
@@ -70,9 +63,7 @@ export default function MyAppBar(props) {
               {'BoBroccoli'}
             </Link>
           </Box>
-          {
-          !props.isMobile ? 
-          <Box sx={{ flex: 1, display: 'flex'}}>
+          <Box sx={{ flex: 1, display: {xs: 'none', sm: 'none', md:'flex'}}}>
             <Box sx={{ flex: 2, display: 'flex', justifyContent: 'center' }}>
               <Button variant='outlined' sx={{fontSize: 17}} onClick={handleMyServiceMenuOpen}>
                 {'My Service'}
@@ -102,9 +93,7 @@ export default function MyAppBar(props) {
                 {'Sign Up'}
               </Link>
             </Box>
-          </Box> :
-          null
-          }
+          </Box>
       </Toolbar>
     </AppBar>
     <MobileDrawer drawOpen={drawOpen} setDrawOpen={setDrawOpen}/>

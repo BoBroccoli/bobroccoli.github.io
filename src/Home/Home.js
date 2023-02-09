@@ -10,9 +10,12 @@ import TalkPage from '../Page/TalkPage';
 import AboutPage from '../Page/AboutPage';
 import CarPage from '../Page/CarPage';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import CodingServicePage from '../Page/CodingServicePage';
+import { DrawerHeader } from '../Component/SubComponent/DrawerHeader';
+import { useTheme } from '@mui/material/styles';
 
 function Home() {
-  const isMobile = useMediaQuery('(max-width:977px)');
+  const theme = useTheme();
   const [talks, updateTalks] = useState([{ day: dayjs('2022-10-30 09:30'), description: "", firstName: "Kevin", lastName: "Zhang", reasons: ['Car related questions'] },
   { day: dayjs('2022-10-30 10:30'), description: "I just want to know you...", firstName: "Josh", lastName: "Sky", reasons: ['Other'] },
   { day: dayjs('2022-10-30 09:30'), description: "", firstName: "Kevin", lastName: "Zhang", reasons: ['Car related questions'] },
@@ -49,18 +52,14 @@ function Home() {
     }
   }
   return (
-    <Box sx={{ display: 'flex' }}>
-      <MyAppBar isMobile={isMobile} talks={talks} updateTalks={updateTalksHook} />
-      {/* {renderSwitch(currentPage)} */}
-      <Fade in={showAlert} timeout={1000}><Alert
-        sx={{ position: 'fixed', bottom: 50, right: 50 }}
-        iconMapping={{
-          success: <CheckCircleOutlineIcon fontSize="inherit" />,
-        }}
-      >
-        Talk has been scheduled with Bo
-      </Alert></Fade>
-    </Box >
+    <>
+      <Box sx={{ display: 'flex' }}>
+        <MyAppBar talks={talks} updateTalks={updateTalksHook} />
+      </Box >
+      <Box sx={{display: 'flex', justifyContent: 'center', backgroundColor: theme.palette.bg_secondary.main}} >
+        <CodingServicePage></CodingServicePage>
+      </Box>
+    </>
   )
 }
 
