@@ -15,7 +15,7 @@ export const theme = createTheme({
             main: '#424C55' //Dark grey
         },
         bg_secondary: {
-            main: '#f5f5f5' //lighter grey
+            main: '#dcdcdc' //lighter grey
         },
         menu_grey: {
             main: '#585858' //grey white

@@ -42,7 +42,7 @@ export default function MyAppBar(props) {
   const theme = useTheme();
   return (
     <>
-    <AppBar open={drawOpen} position='static'>
+    <AppBar open={drawOpen} position='fixed'>
       <Toolbar sx={{ justifyContent: 'space-between', background: theme.palette.bg.main, height:'80px'}}>
           <IconButton
               color="inherit"
