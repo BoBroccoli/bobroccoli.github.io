@@ -13,6 +13,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import CodingServicePage from '../Page/CodingServicePage';
 import { DrawerHeader } from '../Component/SubComponent/DrawerHeader';
 import { useTheme } from '@mui/material/styles';
+import CarServicePage from '../Page/CarServicePage';
 
 function Home() {
   const theme = useTheme();
@@ -56,8 +57,9 @@ function Home() {
       <Box sx={{ display: 'flex' }}>
         <MyAppBar talks={talks} updateTalks={updateTalksHook} />
       </Box >
-      <Box sx={{display: 'flex', justifyContent: 'center', backgroundColor: theme.palette.bg_secondary.main}} >
+      <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: theme.palette.bg_secondary.main}} >
         <CodingServicePage></CodingServicePage>
+        <CarServicePage></CarServicePage>
       </Box>
     </>
   )
