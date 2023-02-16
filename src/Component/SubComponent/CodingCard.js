@@ -19,7 +19,7 @@ const CodingCard = (props) => {
   const cardTitle = props.cardTitle;
   const cardContent = props.cardContent;
   return (
-    <Card raised={true} sx={{width: {sx: '100%', md: '400px', padding: 20, margin: '10px 10px 10px 10px'}}}>
+    <Card raised={true} sx={{width: {sx: '100%', md: '400px', padding: 20, margin: '30px'}}}>
             <CardMedia
               component="img"
               image={imageUrl}

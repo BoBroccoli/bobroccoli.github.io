@@ -23,6 +23,7 @@ export const theme = createTheme({
     },
     typography: {
         fontFamily: 'sans-serif',
+        color: 'black',
     },
     components: {
         MuiButtonBase: {

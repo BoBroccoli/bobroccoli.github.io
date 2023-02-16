@@ -19,8 +19,8 @@ const CodingServicePage = () => {
   
   return (
     <>
-      <Box sx={{width: '90%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-          <Box sx={{ marginTop: 15, display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundImage: 'url(./coding.png)', backgroundSize: 'cover',  width: {xs: '100%', lg: 1200}, height: {xs: 500, md: 1200}, backgroundRepeat: 'no-repeat'}}>
+      <Box sx={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+          <Box sx={{display: 'flex', backgroundAttachment: 'fixed',justifyContent: 'center', alignItems: 'center', backgroundImage: 'url(./coding_bg.png)', backgroundSize: 'cover',  width: '100%', height: {xs: 400, md: 900, lg: 1000}, backgroundRepeat: 'no-repeat'}}>
             <Box sx={{backgroundColor: 'white', opacity: 0.7, width: {xs: '100%', md:'50%'}, flexWrap: 'wrap', padding: 10}}>
               <Typography marginBottom={10} align='center' variant='h4' color={'black'}>Introduction</Typography>
               <Typography align='center' color={'black'}>Hello and welcome to my personal website! Please feel free to poke around.</Typography>        
