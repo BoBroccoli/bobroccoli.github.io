@@ -1,54 +1,100 @@
-import { Button, Grid, IconButton, Link, Paper, Stack, Typography } from '@mui/material'
-import { Box } from '@mui/system'
-import AddCircleIcon from '@mui/icons-material/AddCircle';
-import React from 'react'
+import { Button, Grid, Link, Paper, Stack, Typography } from "@mui/material";
+import { Box } from "@mui/system";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import React from "react";
+import CarServicePaperItem from "../Component/SubComponent/CarServicePaperItem";
 
 const CarServicePage = () => {
+  const item_arr = [
+    {
+      img_url: "url(./car_brake.png)",
+      title: "Brake Service",
+      content:
+        "Help you replace both brake pads and rotors, I can show you exactly steps how to do it and next time you will know what need to be done.",
+      external_link: "https://www.autozone.com/lp/duralast-brakes",
+      link_title: "Brakes Parts",
+    },
+    {
+      img_url: "url(./engine.png)",
+      title: "Engine Service",
+      content:
+        "Help you replace the engine oil and filter. Tell you what is the best oil for your car engine. Most shop charges a lot, you will find out how cheap it is.",
+      external_link: "https://www.autozone.com/lp/duralast-brakes",
+      link_title: "Engine Parts",
+    },
+    {
+      img_url: "url(./suspension.png)",
+      title: "Suspension Service",
+      content:
+        "Help you identify what is the issue of your suspension, I can show you how to inspect the car's suspension and replace the parts only needed.",
+      external_link: "https://www.autozone.com/lp/duralast-brakes",
+      link_title: "Suspension Parts",
+    },
+    {
+      img_url: "url(./compressor.png)",
+      title: "AC Service",
+      content:
+        "Hot summer and AC not cool enought? I can show you how to find out which part is leaking, replace the AC compressor and recharge the AC System.",
+      external_link: "https://www.autozone.com/lp/duralast-brakes",
+      link_title: "AC Parts",
+    },
+  ];
   return (
-    <Box sx={{ marginTop: 15, backgroundImage: 'url(./s2-bg.jpg)', height: {xs:'400px', md: '800px', lg: '1000px'},backgroundSize: 'cover'}}>
-      <Box sx={{ display: "flex", flexDirection:{xs: 'column', md: 'row'}, height: '100%', alignItems: 'center' }}>
-        <Box sx={{width: 500, margin: '100px', backgroundColor: 'white', opacity: 0.7, padding: '20px', borderRadius: '40px'}}>
-          <Typography variant='body3' color='black' fontWeight='bolder'>I love to work on cars. I changed lots of things for my car, such as engine oil, timing belt, AC replacement, breaks, rotors, 
-            and etc. If you are interested in the cars or need my help for replacement. Please let me know.
-          </Typography>
-        </Box>
-        <Grid container spacing={'20px'} width={800}>
-          <Grid item xs={12}>
-            <Paper elevation={4} sx={{p:3}}>
-              <Grid container spacing={1}>
-                <Grid item xs={4}>
-                  <Box sx={{backgroundImage: 'url(./car_brake.png)', width: 200, height: 200,backgroundSize: 'cover'}} />
-                </Grid>
-                <Grid item xs={6}>
-                  <Stack spacing={2}>
-                    <Typography color='black' gutterBottom variant="h4" component="div">Brake Service</Typography>
-                    <Typography color='black' gutterBottom variant="body3" component="div">Help you replace both brake pads and rotors, I can show you exactly steps how to do it and next time you will know what need to be done. </Typography>
-                    <Link href="https://www.autozone.com/lp/duralast-brakes" underline="none" sx={{ color: 'black', fontSize: 20}}>
-                      {'Autozone Brakes'}
-                    </Link>
-                  </Stack>
-                </Grid>
-                <Grid item xs={2}>
-                  <Button variant='outlined' startIcon={<AddCircleIcon />}>
-                    Quote
-                  </Button>
-                </Grid>
-              </Grid>
-            </Paper>
-          </Grid>
-          <Grid item xs={1} md={1}>
-            <Box sx={{backgroundImage: 'url(./engine.png)', width: 300,height: 300,backgroundSize: 'cover'}}></Box> 
-          </Grid>
-          <Grid item xs={1} md={1}>
-            <Box sx={{backgroundImage: 'url(./suspension.png)', width: 300, height: 300,backgroundSize: 'cover'}}></Box>
-          </Grid>
-          <Grid item xs={1} md={1}>
-            <Box sx={{backgroundImage: 'url(./compressor.png)', width: 300,height: 300,backgroundSize: 'cover'}}></Box>
-          </Grid>
+    <Box
+      sx={{
+        marginTop: 15,
+        backgroundImage: "url(./s2-bg.jpg)",
+        height: "auto",
+        backgroundSize: "cover",
+      }}
+    >
+      <Grid container columns={12}>
+        <Grid
+          item
+          xs={12}
+          md={4}
+          lg={3}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              height: "wrap-content",
+              width: { xs: "60%", md: "80%" },
+              backgroundColor: "white",
+              opacity: 0.7,
+              padding: "20px",
+              borderRadius: "40px",
+              marginTop: {xs: 5, lg: 0}
+            }}
+          >
+            <Typography variant="body3" color="black" fontWeight="bolder">
+              I love to work on cars. I changed lots of things for my car, such
+              as engine oil, timing belt, AC replacement, breaks, rotors, and
+              etc. If you are interested in the cars or need my help for
+              replacement. Please let me know.
+            </Typography>
+          </Box>
         </Grid>
-      </Box>
+        <Grid item xs={12} md={8} lg={9} spacing={"20px"}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            {item_arr.map((item) => (
+              <CarServicePaperItem {...item} />
+            ))}
+          </Box>
+        </Grid>
+      </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default CarServicePage
+export default CarServicePage;
