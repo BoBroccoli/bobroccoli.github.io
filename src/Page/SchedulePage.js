@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@mui/material";
 import React, { useState } from "react";
+import MySheet from "../Component/SubComponent/MySheet";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "#00FFFF",
@@ -22,9 +23,10 @@ const SchedulePage = () => {
   const [serviceType, setServiceType] = useState("");
   return (
     <>
-    <Box sx={{display: 'flex', justifyContent: 'center'}}>
-      <Grid container sx={{width:{xs: '80%', md:'50%'}}}  spacing={4}>
-        <Grid item xs={12} md={6}>
+    <Box display='flex' justifyContent='center'>
+    <MySheet width='40%' height='500px' subject='Please Schedual'>
+      <Grid container sx={{width:{xs: '90%'}}}  spacing={4}>
+        <Grid item xs={12}>
           <CssTextField
             id="demo-helper-text-misaligned-no-helper"
             label="Your name"
@@ -35,7 +37,7 @@ const SchedulePage = () => {
             fullWidth
           />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12}>
           <FormControl fullWidth>
             <InputLabel id="simple-select-label">Service</InputLabel>
             <Select
@@ -99,6 +101,7 @@ const SchedulePage = () => {
         </FormControl>
         </Grid>
       </Grid>
+      </MySheet>
       </Box>
     </>
   );
