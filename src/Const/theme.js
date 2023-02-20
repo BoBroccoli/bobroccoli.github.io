@@ -3,10 +3,10 @@ export const theme = createTheme({
     palette: {
         primary: {
             main: '#00FFFF', // cyan color
-            secondary: '#3AA14F' // Green
+            secondary: '#000000' // Green
         },
         secondary: {
-            main: '#3AA14F' // Green
+            main: '#000000' // Green
         },
         third: {
             main: '#FFFFFF' // Light white

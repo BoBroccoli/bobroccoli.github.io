@@ -7,6 +7,7 @@ import CarServicePaperItem from "../Component/SubComponent/CarServicePaperItem";
 const CarServicePage = () => {
   const item_arr = [
     {
+      key: 1,
       img_url: "url(./car_brake.png)",
       title: "Brake Service",
       content:
@@ -15,6 +16,7 @@ const CarServicePage = () => {
       link_title: "Brakes Parts",
     },
     {
+      key: 2,
       img_url: "url(./engine.png)",
       title: "Engine Service",
       content:
@@ -23,6 +25,7 @@ const CarServicePage = () => {
       link_title: "Engine Parts",
     },
     {
+      key: 3,
       img_url: "url(./suspension.png)",
       title: "Suspension Service",
       content:
@@ -31,6 +34,7 @@ const CarServicePage = () => {
       link_title: "Suspension Parts",
     },
     {
+      key: 4,
       img_url: "url(./compressor.png)",
       title: "AC Service",
       content:
@@ -79,7 +83,7 @@ const CarServicePage = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} md={8} lg={9} spacing={"20px"}>
+        <Grid item xs={12} md={8} lg={9}>
           <Box
             sx={{
               display: "flex",
