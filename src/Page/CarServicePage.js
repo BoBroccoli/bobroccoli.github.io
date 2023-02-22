@@ -47,9 +47,10 @@ const CarServicePage = () => {
     <Box
       sx={{
         marginTop: '40px',
-        backgroundImage: "url(./s2-bg.jpg)",
         height: "auto",
-        backgroundSize: "cover",
+        borderTop: 1,
+        borderTopColor: '#00FFFF',
+        borderRadius: 5
       }}
     >
       <Grid container columns={12}>
@@ -62,7 +63,7 @@ const CarServicePage = () => {
             display: "flex",
             flexDirection:'column',
             alignItems: 'center',
-            justifyContent:'center'
+            marginTop: 5
           }}
         >
           <Box
@@ -82,10 +83,11 @@ const CarServicePage = () => {
               replacement. Please let me know.
             </Typography>
           </Box>
-          <Typography variant="h6" color='#3AA14F' marginTop='20px'>Past Projects</Typography>
+          <Typography variant="h6" color='black' marginTop='20px'>Past Projects</Typography>
           <CarFixImage />
         </Grid>
-        <Grid item xs={12} md={6} lg={6}>
+        <Grid item xs={12} md={6} lg={6} sx={{display: 'flex', flexDirection: 'column' , alignItems: 'center', justifyContent: 'center'}}>
+          <Typography variant="h4" color='black'>Car Service</Typography>
           <Box
             sx={{
               display: "flex",
