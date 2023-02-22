@@ -18,7 +18,7 @@ const CarServicePaperItem = (props) => {
   const link_title = props.link_title;
   return (
     <Paper elevation={4} sx={{ p: 2, m: 5, width: "80%" }}>
-      <Grid container spacing={1}>
+      <Grid container >
         <Grid
           item
           xs={12}
@@ -31,8 +31,8 @@ const CarServicePaperItem = (props) => {
           <Box
             sx={{
               backgroundImage: img_url,
-              width: 200,
-              height: 200,
+              width: 150,
+              height: 150,
               backgroundSize: "cover",
             }}
           />
@@ -42,7 +42,7 @@ const CarServicePaperItem = (props) => {
             <Typography
               color="black"
               gutterBottom
-              variant="h4"
+              variant="h6"
               component="div"
               textAlign="center"
             >
@@ -52,26 +52,25 @@ const CarServicePaperItem = (props) => {
               <Typography
                 color="black"
                 gutterBottom
-                variant="body3"
+                variant="body2"
                 component="div"
-                textAlign="center"
                 sx={{ width: { xs: "50%", md: "100%" } }}
               >
                 {content}
               </Typography>
             </Box>
             <Box display="flex" justifyContent="center">
-              <Link href={external_link} underline="none" sx={{ fontSize: 20 }}>
+              <Link href={external_link} underline="none" sx={{ fontSize: 20, color: '#3AA14F' }}>
                 {link_title}
               </Link>
             </Box>
           </Stack>
         </Grid>
-        <Grid item xs={12} lg={2}>
-          <Box display="flex" justifyContent="center">
-            <Button variant="outlined" startIcon={<AddCircleIcon />}>
-              Quote
-            </Button>
+        <Grid item xs={12} lg={2} sx={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <Box display="flex">
+              <Button variant="outlined" size="small" sx={{color: '#3AA14F', borderColor: '#3AA14F', '&:hover': {borderColor: "#3AA14F"} }} startIcon={<AddCircleIcon />}>
+                Quote
+              </Button>
           </Box>
         </Grid>
       </Grid>

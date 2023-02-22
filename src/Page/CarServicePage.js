@@ -1,7 +1,7 @@
-import { Button, Grid, Link, Paper, Stack, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
 import React from "react";
+import CarFixImage from "../Component/CarFixImage";
 import CarServicePaperItem from "../Component/SubComponent/CarServicePaperItem";
 
 const CarServicePage = () => {
@@ -46,7 +46,7 @@ const CarServicePage = () => {
   return (
     <Box
       sx={{
-        marginTop: 15,
+        marginTop: '40px',
         backgroundImage: "url(./s2-bg.jpg)",
         height: "auto",
         backgroundSize: "cover",
@@ -56,23 +56,23 @@ const CarServicePage = () => {
         <Grid
           item
           xs={12}
-          md={4}
-          lg={3}
+          md={6}
+          lg={6}
           sx={{
             display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            flexDirection:'column',
+            alignItems: 'center',
+            justifyContent:'center'
           }}
         >
           <Box
             sx={{
-              height: "wrap-content",
-              width: { xs: "60%", md: "80%" },
+              width: { xs: "100%", md: "80%" },
               backgroundColor: "white",
               opacity: 0.7,
               padding: "20px",
               borderRadius: "40px",
-              marginTop: {xs: 5, lg: 0}
+              marginTop: {xs: "20px", md: '0px'}
             }}
           >
             <Typography variant="body3" color="black" fontWeight="bolder">
@@ -82,8 +82,10 @@ const CarServicePage = () => {
               replacement. Please let me know.
             </Typography>
           </Box>
+          <Typography variant="h6" color='#3AA14F' marginTop='20px'>Past Projects</Typography>
+          <CarFixImage />
         </Grid>
-        <Grid item xs={12} md={8} lg={9}>
+        <Grid item xs={12} md={6} lg={6}>
           <Box
             sx={{
               display: "flex",

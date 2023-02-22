@@ -16,11 +16,11 @@ const MySheet = (props) => {
         borderWidth: '2px',
         borderColor: "white",
         backgroundColor: "#dcdcdc",
-        marginTop: '20px'
+        ...props.sx,
       }}
     >
       <Box sx={{position:'relative', top:'-13px' ,width: '30%', backgroundColor: '#dcdcdc'}}>
-      <Typography align="center" >
+      <Typography align="center" color='#3AA14F'>
         {props.subject}
       </Typography>
       </Box>
