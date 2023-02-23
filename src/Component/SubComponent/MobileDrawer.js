@@ -15,7 +15,7 @@ import Link from "@mui/material/Link";
 import { DrawerMenuItems } from "../../MenuGroup/DrawerMenuItems";
 import { DrawerHeader } from "./DrawerHeader";
 
-const drawerWidth = 340;
+const drawerWidth = 280;
 const MobileDrawer = (props) => {
   const theme = useTheme();
   return (

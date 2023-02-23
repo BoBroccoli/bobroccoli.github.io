@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import Home from './Home/Home'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import { theme } from './Const/theme';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import Home from "./Home/Home";
+import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline, Toolbar } from "@mui/material";
+import { theme } from "./Const/theme";
+import MyAppBar from "./Component/MyAppBar";
+import CarServicePage from "./Page/CarServicePage";
+import SchedulePage from "./Page/SchedulePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <BrowserRouter>
     <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Home />
+      <CssBaseline />
+      <MyAppBar />
+      <Toolbar />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="home" element={<Home />}></Route>
+        <Route path="car" element={<CarServicePage />}></Route>
+        <Route path="schedule" element={<SchedulePage />}></Route>
+      </Routes>
     </ThemeProvider>
+  </BrowserRouter>
 );
 
 reportWebVitals();

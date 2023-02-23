@@ -7,15 +7,14 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import React from "react";
-import MySheet from "./SubComponent/MySheet";
 const CarFixImage = () => {
   const mediumView = useMediaQuery("(min-width:800px)");
   const theme = useTheme();
+
   return (
-    <MySheet sx={{ marginTop: 5 }} width="90%">
       <ImageList
-        sx={{ height: 1150, padding: 5, width: "100%" }}
-        cols={mediumView ? 2 : 1}
+        sx={{ height: 'auto', padding: 5, width: "100%" }}
+        cols={mediumView ? 3 : 1}
         gap={8}
       >
         {itemData.map((item) => (
@@ -54,7 +53,6 @@ const CarFixImage = () => {
           </ImageListItem>
         ))}
       </ImageList>
-    </MySheet>
   );
 };
 const itemData = [

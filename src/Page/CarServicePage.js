@@ -1,10 +1,12 @@
-import { Grid, Typography } from "@mui/material";
+import { Divider, Grid, Paper, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import CarFixImage from "../Component/CarFixImage";
+import { LineUpTypography } from "../Component/StyledComponent/LineUpTypography";
 import CarServicePaperItem from "../Component/SubComponent/CarServicePaperItem";
 
 const CarServicePage = () => {
+  
   const item_arr = [
     {
       key: 1,
@@ -44,50 +46,76 @@ const CarServicePage = () => {
     },
   ];
   return (
+    <>
     <Box
       sx={{
-        marginTop: '40px',
+        paddingTop: "40px",
         height: "auto",
-        borderTop: 1,
-        borderTopColor: '#00FFFF',
-        borderRadius: 5
+        backgroundColor: "#dcdcdc"
       }}
     >
       <Grid container columns={12}>
         <Grid
           item
           xs={12}
-          md={6}
-          lg={6}
           sx={{
             display: "flex",
-            flexDirection:'column',
-            alignItems: 'center',
-            marginTop: 5
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Box
+          <Paper
             sx={{
-              width: { xs: "100%", md: "80%" },
-              backgroundColor: "white",
-              opacity: 0.7,
-              padding: "20px",
-              borderRadius: "40px",
-              marginTop: {xs: "20px", md: '0px'}
+              width: "80%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
-            <Typography variant="body3" color="black" fontWeight="bolder">
-              I love to work on cars. I changed lots of things for my car, such
-              as engine oil, timing belt, AC replacement, breaks, rotors, and
-              etc. If you are interested in the cars or need my help for
-              replacement. Please let me know.
-            </Typography>
-          </Box>
-          <Typography variant="h6" color='black' marginTop='20px'>Past Projects</Typography>
-          <CarFixImage />
+            <Box width="95%" marginTop={2}>
+              <Divider>
+                <Typography variant="h5" color="black">
+                  Past Projects
+                </Typography>
+              </Divider>
+            </Box>
+            <Box
+              sx={{
+                width: { xs: "100%", md: "80%" },
+                backgroundColor: "white",
+                opacity: 0.7,
+                padding: "20px",
+                borderRadius: "40px",
+                marginTop: { xs: "20px", md: "0px" },
+              }}
+            >
+              <LineUpTypography>
+                I love to work on cars. I changed lots of things for my car,
+                such as engine oil, timing belt, AC replacement, breaks, rotors,
+                and etc. If you are interested in the cars or need my help for
+                replacement. Please let me know.
+              </LineUpTypography>
+            </Box>
+            <CarFixImage />
+          </Paper>
         </Grid>
-        <Grid item xs={12} md={6} lg={6} sx={{display: 'flex', flexDirection: 'column' , alignItems: 'center', justifyContent: 'center'}}>
-          <Typography variant="h4" color='black'>Car Service</Typography>
+        <Grid
+          item
+          xs={12}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Box width={"80%"} marginTop={2}>
+            <Divider>
+              <Typography variant="h5" color="black">
+                Car Service
+              </Typography>
+            </Divider>
+          </Box>
           <Box
             sx={{
               display: "flex",
@@ -102,6 +130,7 @@ const CarServicePage = () => {
         </Grid>
       </Grid>
     </Box>
+    </>
   );
 };
 

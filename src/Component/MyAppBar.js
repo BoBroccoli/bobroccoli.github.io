@@ -2,7 +2,7 @@ import { Toolbar, IconButton, Button, ClickAwayListener } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import { Box } from "@mui/system";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { AboutMeMenuItems } from "../MenuGroup/AboutMeMenuItems";
 import { MyServicesMenuItems } from "../MenuGroup/MyServiceMenuItems";
 import Link from "@mui/material/Link";
@@ -15,6 +15,7 @@ const rightLink = {
   ml: 3,
 };
 export default function MyAppBar(props) {
+  console.log(props.refs);
   const [myServiceMenuOpen, setMyServiceMenuOpen] = useState(false);
   const [myServiceMenuAnchorEl, setMyServiceMenuAnchorEl] = useState(null);
   //For mobile

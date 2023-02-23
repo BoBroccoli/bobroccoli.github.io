@@ -25,7 +25,7 @@ const CodingCard = (props) => {
               image={imageUrl}
               alt="Spring"
             />
-            <Typography variant="h4" color="black" align='center'>{cardTitle}</Typography>
+            <Typography variant="h5" color="black" align='center'>{cardTitle}</Typography>
             <Box sx={{display: 'flex', justifyContent: 'center'}}>
               <ExpandMore
                 expand={expand}

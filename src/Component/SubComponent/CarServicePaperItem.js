@@ -17,7 +17,7 @@ const CarServicePaperItem = (props) => {
   const external_link = props.external_link;
   const link_title = props.link_title;
   return (
-    <Paper elevation={4} sx={{ p: 2, m: 5, width: "80%" }}>
+    <Paper elevation={4} sx={{ p: 2, m: 5, width: {xs:"80%", md:"60%"} }}>
       <Grid container >
         <Grid
           item

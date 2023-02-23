@@ -60,7 +60,7 @@ const SchedulePage = () => {
   };
   return (
     <>
-      <Box display="flex" justifyContent="center" marginTop='60px'>
+      <Box display="flex" justifyContent="center" paddingTop='60px' backgroundColor="#dcdcdc">
         <MySheet sx={{width: {xs:'80%', md:'40%'}}} subject="Schedule a call">
           <Grid container sx={{ width: { xs: "90%" } }} spacing={4}>
             <Grid item xs={12}>
