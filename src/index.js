@@ -18,7 +18,6 @@ root.render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
         <MyAppBar />
-        <Toolbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="home" element={<Home />}></Route>

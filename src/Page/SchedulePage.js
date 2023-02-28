@@ -16,12 +16,13 @@ import MySheet from "../Component/SubComponent/MySheet";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import { ServiceCatArrays } from "../MenuGroup/ServiceCatArrays";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "#00FFFF",
   },
 });
+
 const SchedulePage = () => {
   const [name, setName] = useState("");
   const [serviceType, setServiceType] = useState("");
@@ -37,7 +38,7 @@ const SchedulePage = () => {
       default:
         break;
     }
-  }, [serviceType])
+  }, [serviceType]);
   const [chipCandidate, setChipCandidate] = useState([]);
   const [chipAdded, setChipAdded] = useState([]);
   const handleChipAdd = (chipToAdd) => () => {
@@ -60,8 +61,16 @@ const SchedulePage = () => {
   };
   return (
     <>
-      <Box display="flex" justifyContent="center" paddingTop='60px' backgroundColor="#dcdcdc">
-        <MySheet sx={{width: {xs:'80%', md:'40%'}}} subject="Schedule a call">
+      <Box
+        display="flex"
+        justifyContent="center"
+        paddingTop="60px"
+        backgroundColor="#dcdcdc"
+      >
+        <MySheet
+          sx={{ width: { xs: "80%", md: "40%" } }}
+          subject="Schedule a call"
+        >
           <Grid container sx={{ width: { xs: "90%" } }} spacing={4}>
             <Grid item xs={12}>
               <CssTextField
@@ -121,9 +130,9 @@ const SchedulePage = () => {
               </Grid>
             </Grid>
             <Grid item xs={12}>
-              <Box sx={{display:'flex', justifyContent:'center'}}>
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <MySheet
-                  sx={{width: {xs:'100%', md:'70%'}}}
+                  sx={{ width: { xs: "100%", md: "70%" } }}
                   height="wrap-content"
                   subject="Let's discuss"
                 >
@@ -147,7 +156,11 @@ const SchedulePage = () => {
                   <RestartAltIcon />
                   {"Reset"}
                 </Button>
-                <Button variant="outlined" onClick={handleReset} color="secondary">
+                <Button
+                  variant="outlined"
+                  onClick={handleReset}
+                  color="secondary"
+                >
                   <ArrowUpwardIcon />
                   {"Submit"}
                 </Button>

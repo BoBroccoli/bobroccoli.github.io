@@ -49,9 +49,8 @@ const CarServicePage = () => {
     <>
     <Box
       sx={{
-        paddingTop: "40px",
+        marginTop: "70px",
         height: "auto",
-        backgroundColor: "#dcdcdc"
       }}
     >
       <Grid container columns={12}>
