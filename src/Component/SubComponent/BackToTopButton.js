@@ -1,23 +1,36 @@
-import { IconButton } from "@mui/material";
+import { Box, Fab, Fade, useScrollTrigger } from "@mui/material";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import React from "react";
-import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 const BackToTopButton = (props) => {
-  const handleScroll = (topRef) => {
-    window.scrollTo({
-      top: topRef.offsetTop,
-      left: 0,
-      behavior: "smooth",
-    });
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: props.threshold,
+    target: props.window ? window() : undefined,
+  });
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      "#back-to-top-anchor"
+    );
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
   };
   return (
-    <IconButton
-      sx={{ position: "fixed", bottom: 10, right: 10 }}
-      onClick={() => {
-        handleScroll(props.topRef.current);
-      }}
-    >
-      <ArrowCircleUpIcon sx={{ width: 40, height: 40, color: "#3AA14F" }} />
-    </IconButton>
+    <Fade in={trigger}>
+      <Box
+        onClick={handleClick}
+        role="presentation"
+        sx={{ position: "fixed", bottom: 16, right: 16 }}
+      >
+        <Fab size="small">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </Box>
+    </Fade>
   );
 };
 

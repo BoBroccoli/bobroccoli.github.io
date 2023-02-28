@@ -2,7 +2,7 @@ import { Toolbar, IconButton, Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar";
 import { Box } from "@mui/system";
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { AboutMeMenuItems } from "../MenuGroup/AboutMeMenuItems";
 import { MyServicesMenuItems } from "../MenuGroup/MyServiceMenuItems";
 import Link from "@mui/material/Link";
@@ -42,14 +42,12 @@ export default function MyAppBar(props) {
     setAboutMeMenuOpen(false);
   };
   const theme = useTheme();
-  const topRef = useRef();
 
   return (
     <>
       <ScrollToHide>
         <AppBar open={drawOpen}>
           <Toolbar
-            ref={topRef}
             sx={{
               justifyContent: "space-between",
               backgroundColor: theme.palette.bg.main,
@@ -146,7 +144,7 @@ export default function MyAppBar(props) {
       </ScrollToHide>
       <MobileDrawer drawOpen={drawOpen} setDrawOpen={setDrawOpen} />
 
-      <BackToTopButton topRef={topRef} />
+      <BackToTopButton />
     </>
   );
 }

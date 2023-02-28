@@ -1,33 +1,36 @@
 import { Box, Typography, styled } from "@mui/material";
 import React, { useState } from "react";
 import { LineUpTypography } from "./StyledComponent/LineUpTypography";
-import CodingCard from "./SubComponent/CodingCard";
+import ServiceCard from "./SubComponent/ServiceCard";
 const ServicesCards = () => {
   const [webBuildingMoreExpanded, setWebBuildingMoreExpanded] = useState(false);
   const [webTeachingMoreExpanded, setWebTeachingMoreExpanded] = useState(false);
   const [webConversationMoreExpanded, setWebConversationMoreExpanded] =
     useState(false);
-    const MyIntro = styled(Box)`
-  animation: slide-bounce 1s ease-in-out;
-  @keyframes slide-bounce {
-    0% {
-      transform: translateX(-100%);
+    const [phoneMoreExpanded, setPhoneMoreExpanded] =
+    useState(false);
+  const MyIntro = styled(Box)`
+    animation: slide-bounce 1s ease-in-out;
+    @keyframes slide-bounce {
+      0% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      75% {
+        transform: translateX(-35px);
+      }
+      100% {
+        transform: translateX(0);
+      }
     }
-    50% {
-      transform: translateX(0);
-    }
-    75% {
-      transform: translateX(-35px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-`
+  `;
 
   const codingImageUrl = "./web_building.png";
   const webTeachingUrl = "./car.png";
   const conversationImageUrl = "./conversation.png";
+  const phoneImagUrl = './phone.png';
 
   const codingCardTitle = "Web / Coding";
   const codingCardContent =
@@ -38,11 +41,18 @@ const ServicesCards = () => {
   const converstationCardTitle = "Conversation";
   const converstationCardContent =
     "Of course, anything you want to share, any new technologies you learned which is cool, I love to hear and have conversation with you.";
-
+  const phoneCardTitle = "PC / Laptop / Phone";
+  const phoneCardContent =
+    "I worked on personal projects in the field of electronics, such as assembling my own gaming PC by selecting components like the CPU and graphics card. I have replaced various laptop components, including hard drives and batteries, I have also replaced phone batteries and screens, etc.";
+  
   return (
     <>
       <Box
-        sx={{ display: "flex", flexDirection: "column", alignItems: "center",  backgroundColor: "#dcdcdc" }}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
       >
         <Box
           sx={{
@@ -83,33 +93,40 @@ const ServicesCards = () => {
         <Box
           sx={{
             marginTop: 5,
-            width: "90%",
             display: "flex",
             flexDirection: { xs: "column", md: "row" },
             justifyContent: "space-between",
+            flexWrap: 'wrap'
           }}
         >
-          <CodingCard
+          <ServiceCard
             expand={webBuildingMoreExpanded}
             setExpand={setWebBuildingMoreExpanded}
             imageUrl={codingImageUrl}
             cardTitle={codingCardTitle}
             cardContent={codingCardContent}
-          ></CodingCard>
-          <CodingCard
+          ></ServiceCard>
+          <ServiceCard
             expand={webTeachingMoreExpanded}
             setExpand={setWebTeachingMoreExpanded}
             imageUrl={webTeachingUrl}
             cardTitle={teachingCardTitle}
             cardContent={teachingCardContent}
-          ></CodingCard>
-          <CodingCard
+          ></ServiceCard>
+          <ServiceCard
             expand={webConversationMoreExpanded}
             setExpand={setWebConversationMoreExpanded}
             imageUrl={conversationImageUrl}
             cardTitle={converstationCardTitle}
             cardContent={converstationCardContent}
-          ></CodingCard>
+          ></ServiceCard>
+          <ServiceCard
+            expand={phoneMoreExpanded}
+            setExpand={setPhoneMoreExpanded}
+            imageUrl={phoneImagUrl}
+            cardTitle={phoneCardTitle}
+            cardContent={phoneCardContent}
+          ></ServiceCard>
         </Box>
       </Box>
     </>
