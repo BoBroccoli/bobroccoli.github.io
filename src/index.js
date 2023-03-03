@@ -10,6 +10,7 @@ import CarServicePage from "./Page/CarServicePage";
 import SchedulePage from "./Page/SchedulePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Component/Footer";
+import About from "./Page/About";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Route path="home" element={<Home />}></Route>
         <Route path="car" element={<CarServicePage />}></Route>
         <Route path="schedule" element={<SchedulePage />}></Route>
+        <Route path="about" element={<About />}></Route>
       </Routes>
       <Footer />
     </ThemeProvider>

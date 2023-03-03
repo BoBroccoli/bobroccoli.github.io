@@ -2,7 +2,7 @@ import { createTheme } from '@mui/material/styles';
 export const theme = createTheme({
     palette: {
         primary: {
-            main: '#00FFFF', // cyan color
+            main: '#FFFFFF', // cyan color
         },
         secondary: {
             main: '#3AA14F' // Green
@@ -44,7 +44,7 @@ export const theme = createTheme({
         MuiTypography: {
             styleOverrides: {
                 root: {
-                    color: '#00FFFF',
+                    color: '#FFFFFF',
                 }
             }
         },

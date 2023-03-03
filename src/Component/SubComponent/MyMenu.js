@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 const MyMenu = (props) => {
   const navigate = useNavigate();
   const handleClick = (path) => () => {
-    console.log(path);
     navigate(path);
   };
   return (
