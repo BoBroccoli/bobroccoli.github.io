@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import Contact from "../Component/Contact";
 import MyTimeline from "../Component/MyTimeline";
 
 const About = () => {
@@ -9,6 +10,7 @@ const About = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        width: '100%'
       }}
     >
       <Box
@@ -31,8 +33,8 @@ const About = () => {
         <Typography
           variant="h6"
           color="black"
-          sx={{ width: "60%", justifyContent: "center" }}
-          p={8}
+          sx={{ width: {xs: '90%',md:"60%"}, justifyContent: "center" }}
+          p={{xs: 0, md:8}}
         >
           I'm someone who enjoys staying active and pursuing a variety of
           interests. In my free time, you might find me playing basketball with
@@ -47,8 +49,8 @@ const About = () => {
           sit still and watch the world go by, so I like to stay active.
         </Typography>
       </Box>
-      
       <MyTimeline />
+      <Contact />
     </Box>
   );
 };

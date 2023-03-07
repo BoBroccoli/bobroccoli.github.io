@@ -6,10 +6,6 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import FastfoodIcon from "@mui/icons-material/Fastfood";
-import LaptopMacIcon from "@mui/icons-material/LaptopMac";
-import HotelIcon from "@mui/icons-material/Hotel";
-import RepeatIcon from "@mui/icons-material/Repeat";
 import Typography from "@mui/material/Typography";
 import MySheet from "./SubComponent/MySheet";
 import { Avatar, styled } from "@mui/material";
@@ -20,7 +16,10 @@ const MyTypography = styled(Typography)`
 
 export default function MyTimeline() {
   return (
-    <MySheet subject="My Education / Work">
+    <MySheet
+      sx={{ "& p.MuiTypography-root": { fontSize: 25 }, marginTop: {xs: '40px'} }}
+      subject="My Experience"
+    >
       <Timeline>
         <TimelineItem>
           <TimelineOppositeContent
@@ -32,13 +31,13 @@ export default function MyTimeline() {
             05-10-2014
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineConnector/>
+            <TimelineConnector />
             <TimelineDot color="primary" variant="outlined">
               <Avatar alt="M" src="/umn.jfif" />
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2, width: '400px'}}>
+          <TimelineContent sx={{ py: "12px", px: 2, width:{xs: "auto", sm: '400px'} }}>
             <MyTypography variant="h6" component="span">
               University of Minnesota
             </MyTypography>
@@ -91,7 +90,7 @@ export default function MyTimeline() {
             <MyTypography variant="h6" component="span">
               Gartner
             </MyTypography>
-            <MyTypography>Software Engineer</MyTypography>
+            <MyTypography variant="subtitle2">Software Engineer</MyTypography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -114,7 +113,30 @@ export default function MyTimeline() {
             <MyTypography variant="h6" component="span">
               Meta
             </MyTypography>
-            <MyTypography>Partner Engineer</MyTypography>
+            <MyTypography variant="subtitle2">Partner Engineer</MyTypography>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent
+            sx={{ m: "auto 0" }}
+            align="right"
+            variant="body2"
+            color="#3AA14F"
+          >
+            05-02-2022
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+            <TimelineDot color="primary" variant="outlined">
+              <Avatar alt="M" src="/od.jfif" />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: "12px", px: 2 }}>
+            <MyTypography variant="h6" component="span">
+              OnDeck
+            </MyTypography>
+            <MyTypography variant="subtitle2">Senior Software Engineer</MyTypography>
           </TimelineContent>
         </TimelineItem>
       </Timeline>
