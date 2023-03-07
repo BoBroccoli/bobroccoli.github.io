@@ -2,53 +2,83 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 import {
   Avatar,
   Box,
-  Button,
-  CardActionArea,
-  CardActions,
-  Grid,
+  Divider,
   IconButton,
+  styled,
+  Tooltip,
 } from "@mui/material";
 import { Stack } from "@mui/system";
 const Contact = () => {
+  const MyIconButton = styled(IconButton)({
+  transition: 'all .3s ease-out',
+  '&:hover': {
+    transform: 'translate(0, -5px)',
+  }
+})
   return (
     <Card
       sx={{
         display: "flex",
         flexDirection: "column",
-        maxWidth: 345,
+        width: { sx: "100%", md: "30%" },
         alignItems: "center",
       }}
     >
+      <Box width="95%" marginTop={2}>
+        <Divider>
+          <Typography variant="h4" color="black">
+            Contact
+          </Typography>
+        </Divider>
+      </Box>
       <Avatar
         alt="Bo"
         src="/photo.jpg"
-        sx={{ width: "300px", height: "300px" }}
+        sx={{ width: "150px", height: "150px" }}
       />
       <CardContent>
         <Stack spacing={2}>
-          <Typography color={"black"} align="center">
-            Name : Bo
+          <Typography variant="h4" color={"black"} align="center">
+            Bo(Beau) Wen
           </Typography>
-          <Typography color={"black"} align="center">
+          <Typography variant="h5" color={"black"} align="center">
             Cell Phone : 2184091761
           </Typography>
-          <Typography color={"black"} align="center">
+          <Typography variant="h5" color={"black"} align="center">
             Email : bowen4091761@gmail.com
           </Typography>
-          <Box>
-          <IconButton color="primary" aria-label="upload picture" component="label">
-      </IconButton>
+          <Box sx={{display: 'flex', justifyContent: 'center'}}>
+            <Tooltip sx={{'.MuiTooltip-tooltipPlacementTop': {height: '100px'}}} title="Instagram" arrow placement="top">
+              <MyIconButton
+              >
+                <InstagramIcon fontSize="large" sx={{ color: "#c32aa3" }} />
+              </MyIconButton>
+            </Tooltip>
+            <Tooltip title="Github" arrow placement="top">
+              <MyIconButton>
+                <GitHubIcon fontSize="large" sx={{ color: "#010101" }} />
+              </MyIconButton>
+            </Tooltip>
+            <Tooltip title="LinkedIn" arrow placement="top" sx={{}}>
+              <MyIconButton>
+                <LinkedInIcon fontSize="large" sx={{ color: "#0a66c2" }} />
+              </MyIconButton>
+            </Tooltip>
+            <Tooltip title="Email" arrow placement="top">
+              <MyIconButton>
+                <EmailIcon fontSize="large" sx={{ color: "#4285f4" }} />
+              </MyIconButton>
+            </Tooltip>
           </Box>
         </Stack>
       </CardContent>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-      </CardActions>
     </Card>
   );
 };

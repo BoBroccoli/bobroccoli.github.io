@@ -10,7 +10,7 @@ const About = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        width: '100%'
+        width: "100%",
       }}
     >
       <Box
@@ -33,8 +33,8 @@ const About = () => {
         <Typography
           variant="h6"
           color="black"
-          sx={{ width: {xs: '90%',md:"60%"}, justifyContent: "center" }}
-          p={{xs: 0, md:8}}
+          sx={{ width: { xs: "90%", md: "60%" }, justifyContent: "center" }}
+          p={{ xs: 0, md: 8 }}
         >
           I'm someone who enjoys staying active and pursuing a variety of
           interests. In my free time, you might find me playing basketball with
@@ -49,8 +49,18 @@ const About = () => {
           sit still and watch the world go by, so I like to stay active.
         </Typography>
       </Box>
-      <MyTimeline />
-      <Contact />
+      <Box
+        mb={10}
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          justifyContent: "space-around",
+          width: "100%",
+        }}
+      >
+        <MyTimeline />
+        <Contact />
+      </Box>
     </Box>
   );
 };
