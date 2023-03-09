@@ -41,10 +41,10 @@ const Contact = () => {
       <Avatar
         alt="Bo"
         src="/photo.jpg"
-        sx={{ width: "150px", height: "150px" }}
+        sx={{ width: "150px", height: "150px", mt:5 }}
       />
       <CardContent>
-        <Stack spacing={2}>
+        <Stack spacing={4}>
           <Typography variant="h4" color={"black"} align="center">
             Bo(Beau) Wen
           </Typography>
@@ -56,23 +56,22 @@ const Contact = () => {
           </Typography>
           <Box sx={{display: 'flex', justifyContent: 'center'}}>
             <Tooltip sx={{'.MuiTooltip-tooltipPlacementTop': {height: '100px'}}} title="Instagram" arrow placement="top">
-              <MyIconButton
-              >
+              <MyIconButton href='https://www.instagram.com/bobroccoli_'>
                 <InstagramIcon fontSize="large" sx={{ color: "#c32aa3" }} />
               </MyIconButton>
             </Tooltip>
             <Tooltip title="Github" arrow placement="top">
-              <MyIconButton>
+              <MyIconButton href='https://github.com/BoBroccoli'>
                 <GitHubIcon fontSize="large" sx={{ color: "#010101" }} />
               </MyIconButton>
             </Tooltip>
             <Tooltip title="LinkedIn" arrow placement="top" sx={{}}>
-              <MyIconButton>
+              <MyIconButton href='https://www.linkedin.com/in/bo-beau-wen-a62304a8/'>
                 <LinkedInIcon fontSize="large" sx={{ color: "#0a66c2" }} />
               </MyIconButton>
             </Tooltip>
             <Tooltip title="Email" arrow placement="top">
-              <MyIconButton>
+              <MyIconButton href='mailto:bowen4091761@gmail.com'>
                 <EmailIcon fontSize="large" sx={{ color: "#4285f4" }} />
               </MyIconButton>
             </Tooltip>

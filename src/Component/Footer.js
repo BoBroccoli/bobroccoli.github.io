@@ -16,9 +16,9 @@ const Footer = () => {
               justifyContent={"space-around"}
               height="100%"
             >
-              <Typography variant="h4" padding={1}>BoBrocoli</Typography>
-              <Typography variant="h7" padding={1}>Always want to be inspired</Typography>
-              <Box display={"flex"} justifyContent="space-around" width={100} padding={1}>
+              <Typography variant="h4" padding={2}>BoBrocoli</Typography>
+              <Typography variant="h7" padding={2}>Always want to be inspired</Typography>
+              <Box display={"flex"} justifyContent="space-around" width={100} padding={2}>
                 <InstagramIcon sx={{ color: "white" }} />
                 <EmailIcon sx={{ color: "white" }} />
               </Box>

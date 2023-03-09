@@ -4,7 +4,12 @@ import { useNavigate } from "react-router-dom";
 const MyMenu = (props) => {
   const navigate = useNavigate();
   const handleClick = (path) => () => {
-    navigate(path);
+    if(path === 'contact') {
+      props.setContactModalOpen()
+      console.log(true)
+    }
+    else
+      navigate(path);
   };
   return (
     <Menu

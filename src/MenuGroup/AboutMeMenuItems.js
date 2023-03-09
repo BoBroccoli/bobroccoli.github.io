@@ -1,11 +1,12 @@
 export const AboutMeMenuItems = [
     {
         id:0,
-        label:'My Education',
+        label:'About Me',
         path:'about'
     },
     {
         id:1,
-        label:'My Experience'
+        label:'Contact Me',
+        path: 'contact'
     }
 ]
