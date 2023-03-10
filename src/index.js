@@ -11,17 +11,19 @@ import SchedulePage from "./Page/SchedulePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Component/Footer";
 import About from "./Page/About";
+import CodeServicePage from "./Page/CodeServicePage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Toolbar id="back-to-top-anchor" sx={{backgroundColor: '#282828'}}/>
+      <Toolbar id="back-to-top-anchor" sx={{backgroundColor: theme.palette.bg_secondary.main}}/>
       <MyAppBar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="home" element={<Home />}></Route>
+        <Route path="code" element={<CodeServicePage />}></Route>
         <Route path="car" element={<CarServicePage />}></Route>
         <Route path="schedule" element={<SchedulePage />}></Route>
         <Route path="about" element={<About />}></Route>
