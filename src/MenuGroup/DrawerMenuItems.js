@@ -12,7 +12,7 @@ export const DrawerMenuItems = [
     },
     {
         id:1,
-        label:'Car Brake Service',
+        label:'Car Service',
         icon: <DirectionsCarIcon color='third'/>
     },
     {

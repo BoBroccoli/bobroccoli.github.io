@@ -102,9 +102,9 @@ const SchedulePage = () => {
                   </MenuItem>
                   <MenuItem
                     sx={{ color: "primary.main" }}
-                    value={"Car Brake Service"}
+                    value={"Car Service"}
                   >
-                    Car Brake Service
+                    Car Service
                   </MenuItem>
                 </Select>
               </FormControl>
