@@ -19,7 +19,7 @@ import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
-    color: "#00FFFF",
+    color: "#3AA14F",
   },
 });
 
@@ -69,13 +69,13 @@ const SchedulePage = () => {
       >
         <MySheet
           sx={{ width: { xs: "80%", md: "40%" } }}
-          subject="Schedule a call"
+          subject="Schedule A Call"
         >
           <Grid container sx={{ width: { xs: "90%" } }} spacing={4}>
             <Grid item xs={12}>
               <CssTextField
                 id="demo-helper-text-misaligned-no-helper"
-                label="Your name"
+                label="Your name *"
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
@@ -84,8 +84,8 @@ const SchedulePage = () => {
               />
             </Grid>
             <Grid item xs={12}>
-              <FormControl fullWidth>
-                <InputLabel id="simple-select-label">Service</InputLabel>
+              <FormControl fullWidth sx={{'& .label': '#3AA14F'}}>
+                <InputLabel id="simple-select-label">Service *</InputLabel>
                 <Select
                   labelId="simple-select-label"
                   value={serviceType}

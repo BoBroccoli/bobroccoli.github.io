@@ -6,7 +6,6 @@ const MyMenu = (props) => {
   const handleClick = (path) => () => {
     if(path === 'contact') {
       props.setContactModalOpen()
-      console.log(true)
     }
     else
       navigate(path);

@@ -1,11 +1,13 @@
-import { Box, Paper, Stack, Typography } from "@mui/material";
+import { Box, Button, IconButton, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CodeServicePage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Stack spacing={10} mt={10} mb={10}>
-        <Typography variant="h3" color='#3AA14F' align="center">Ongoing Projects</Typography>
+        <Typography variant="h3" color='#3AA14F' align="center">Current Projects</Typography>
         <Box
           display="flex"
           justifyContent="center"
@@ -59,7 +61,7 @@ const CodeServicePage = () => {
             </Typography>
             <Typography variant="body1" color={"white"} sx={{ p: 3 }}>
               Help you connect to experienced professional from many companies like Google, Meta, Amazon. Understand what
-              they and what technologies they use.
+              they do and what technologies they use.
             </Typography>
           </Paper>
           <Box
@@ -70,6 +72,9 @@ const CodeServicePage = () => {
               backgroundSize: "cover",
             }}
           />
+        </Box>
+        <Box display='flex' justifyContent='center'>
+        <Button variant="contained" sx={{width: 500, backgroundColor: '#3AA14F'}} onClick={() => {navigate('/schedule')}}>{'Schedule an appointment or directly contact me'}</Button>
         </Box>
       </Stack>
     </>

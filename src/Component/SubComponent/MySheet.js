@@ -14,7 +14,7 @@ const MySheet = (props) => {
         height: props.height,
         borderRadius: "8px",
         borderWidth: '2px',
-        borderColor: "white",
+        borderColor: "#3AA14F",
         backgroundColor: "#dcdcdc",
         ...props.sx,
       }}

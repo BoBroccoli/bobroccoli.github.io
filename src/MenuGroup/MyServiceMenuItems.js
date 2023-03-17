@@ -11,12 +11,7 @@ export const MyServicesMenuItems = [
     },
     {
         id:2,
-        label:'House Service',
-        path: 'code'
+        label:'Schedule a call',
+        path: '/schedule'
     },
-    {
-        id:3,
-        label:'Immigration Consult',
-        path: 'code'
-    }
 ]
