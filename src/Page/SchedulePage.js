@@ -8,6 +8,7 @@ import {
   ListItem,
   MenuItem,
   Select,
+  Snackbar,
   styled,
   TextField,
 } from "@mui/material";
@@ -25,6 +26,8 @@ const CssTextField = styled(TextField)({
 
 const SchedulePage = () => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [serviceType, setServiceType] = useState("");
   useEffect(() => {
     setChipAdded([]);
@@ -59,6 +62,9 @@ const SchedulePage = () => {
     setChipCandidate([]);
     setChipAdded([]);
   };
+  const handleSubmit = () => {
+    setSnackbarOpen(true);
+  };
   return (
     <>
       <Box
@@ -75,7 +81,7 @@ const SchedulePage = () => {
             <Grid item xs={12}>
               <CssTextField
                 id="demo-helper-text-misaligned-no-helper"
-                label="Your name *"
+                label="Your Name *"
                 value={name}
                 onChange={(e) => {
                   setName(e.target.value);
@@ -84,8 +90,21 @@ const SchedulePage = () => {
               />
             </Grid>
             <Grid item xs={12}>
-              <FormControl fullWidth sx={{'& .label': '#3AA14F'}}>
-                <InputLabel id="simple-select-label">Service *</InputLabel>
+              <CssTextField
+                id="demo-helper-text-misaligned-no-helper"
+                label="Your Email *"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <FormControl fullWidth>
+                <InputLabel id="simple-select-label" color="secondary">
+                  Service *
+                </InputLabel>
                 <Select
                   labelId="simple-select-label"
                   value={serviceType}
@@ -158,7 +177,7 @@ const SchedulePage = () => {
                 </Button>
                 <Button
                   variant="outlined"
-                  onClick={handleReset}
+                  onClick={handleSubmit}
                   color="secondary"
                 >
                   <ArrowUpwardIcon />
@@ -168,6 +187,37 @@ const SchedulePage = () => {
             </Grid>
           </Grid>
         </MySheet>
+        {name !== "" &&
+        serviceType !== "" &&
+        email !== "" &&
+        chipAdded.length > 0 ? (
+          <Snackbar
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            sx={{
+              "& .MuiSnackbarContent-root": {
+                background: "#3AA14F",
+              },
+            }}
+            open={snackbarOpen}
+            autoHideDuration={2000}
+            onClose={() => setSnackbarOpen(false)}
+            message="Success Scheduled!"
+          />
+        ) : (
+          <Snackbar
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            sx={{
+              "& .MuiSnackbarContent-root": {
+                background: '#D32F2F',
+              },
+            }}
+            sever
+            open={snackbarOpen}
+            autoHideDuration={2000}
+            onClose={() => setSnackbarOpen(false)}
+            message="Please Fill All Reqired Fields!"
+          />
+        )}
       </Box>
     </>
   );

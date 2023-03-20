@@ -7,7 +7,6 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
-import MySheet from "./SubComponent/MySheet";
 import { Avatar, Box, Divider, Paper, styled } from "@mui/material";
 
 const MyTypography = styled(Typography)`
@@ -130,7 +129,7 @@ export default function MyTimeline() {
             <MyTypography variant="h5" component="span">
               Meta
             </MyTypography>
-            <MyTypography variant="subtitle1">Partner Engineer</MyTypography>
+            <MyTypography variant="subtitle1">Software Engineer</MyTypography>
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
