@@ -137,7 +137,7 @@ export default function MyAppBar(props) {
                   alignItems: "center",
                 }}
               >
-                <Link
+                {/* <Link
                   variant="h6"
                   underline="none"
                   href="/"
@@ -152,7 +152,7 @@ export default function MyAppBar(props) {
                   sx={{ ...rightLink }}
                 >
                   {"Sign Up"}
-                </Link>
+                </Link> */}
               </Box>
             </Box>
             <Modal

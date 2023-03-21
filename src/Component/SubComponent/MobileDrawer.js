@@ -14,10 +14,12 @@ import { Box } from "@mui/system";
 import Link from "@mui/material/Link";
 import { DrawerMenuItems } from "../../MenuGroup/DrawerMenuItems";
 import { DrawerHeader } from "./DrawerHeader";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 280;
 const MobileDrawer = (props) => {
   const theme = useTheme();
+  const navigate = useNavigate();
   return (
     <ClickAwayListener
       mouseEvent="onMouseDown"
@@ -81,9 +83,9 @@ const MobileDrawer = (props) => {
         </DrawerHeader>
         <Divider sx={{ borderColor: theme.palette.bg_secondary.main }} />
         <List>
-          {DrawerMenuItems.slice(0, 4).map((item) => (
+          {DrawerMenuItems.slice(0, 3).map((item) => (
             <ListItem key={item.id} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() => {navigate(item.path)}}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.label} />
               </ListItemButton>
@@ -92,9 +94,9 @@ const MobileDrawer = (props) => {
         </List>
         <Divider sx={{ borderColor: theme.palette.bg_secondary.main }} />
         <List>
-          {DrawerMenuItems.slice(4, 6).map((item) => (
+          {DrawerMenuItems.slice(3, 5).map((item) => (
             <ListItem key={item.id} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() => {navigate(item.path)}}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.label} />
               </ListItemButton>

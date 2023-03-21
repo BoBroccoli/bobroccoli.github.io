@@ -27,7 +27,7 @@ const Contact = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        width: { sx: "100%", md: "30%" },
+        width: '100%' ,
         alignItems: "center",
       }}
     >

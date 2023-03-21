@@ -47,7 +47,7 @@ const CodeServicePage = () => {
             </Typography>
             <Typography variant="body1" color={"white"} sx={{ p: 3 }}>
               Customize website for your portforlio or your business with as low
-              as $20/month.
+              as $25/month.
             </Typography>
           </Paper>
         </Box>
