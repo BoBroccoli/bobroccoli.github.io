@@ -1,5 +1,6 @@
 import { Box, Typography, styled } from "@mui/material";
 import React, { useState } from "react";
+import { BouncyCard } from "./StyledComponent/BouncyCard";
 import { LineUpTypography } from "./StyledComponent/LineUpTypography";
 import ServiceCard from "./SubComponent/ServiceCard";
 const ServicesCards = () => {
@@ -9,23 +10,6 @@ const ServicesCards = () => {
     useState(false);
     const [phoneMoreExpanded, setPhoneMoreExpanded] =
     useState(false);
-  const MyIntro = styled(Box)`
-    animation: slide-bounce 1s ease-in-out;
-    @keyframes slide-bounce {
-      0% {
-        transform: translateX(-100%);
-      }
-      50% {
-        transform: translateX(0);
-      }
-      75% {
-        transform: translateX(-35px);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-  `;
 
   const codingImageUrl = "./web_building.png";
   const webTeachingUrl = "./car.png";
@@ -67,7 +51,7 @@ const ServicesCards = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <MyIntro
+          <BouncyCard
             sx={{
               backgroundColor: "white",
               opacity: 0.7,
@@ -87,7 +71,7 @@ const ServicesCards = () => {
             <LineUpTypography align="center" color={"black"}>
               Hello and welcome to my personal website!
             </LineUpTypography>
-          </MyIntro>
+          </BouncyCard>
         </Box>
 
         <Box

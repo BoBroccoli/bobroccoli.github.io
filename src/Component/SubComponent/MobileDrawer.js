@@ -65,8 +65,6 @@ const MobileDrawer = (props) => {
               >
                 {"Welcome"}
               </Link>
-
-              <Typography>My Service</Typography>
             </Box>
             <IconButton
               onClick={() => {
@@ -94,7 +92,7 @@ const MobileDrawer = (props) => {
         </List>
         <Divider sx={{ borderColor: theme.palette.bg_secondary.main }} />
         <List>
-          {DrawerMenuItems.slice(3, 5).map((item) => (
+          {DrawerMenuItems.slice(3, 4).map((item) => (
             <ListItem key={item.id} disablePadding>
               <ListItemButton onClick={() => {navigate(item.path)}}>
                 <ListItemIcon>{item.icon}</ListItemIcon>

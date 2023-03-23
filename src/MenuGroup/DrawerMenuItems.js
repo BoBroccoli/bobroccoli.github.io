@@ -24,13 +24,7 @@ export const DrawerMenuItems = [
     },
     {
         id:3,
-        label:'About Me',
-        icon: <SupportAgentIcon color='third'/>,
-        path: 'about'
-    },
-    {
-        id:4,
-        label:'Contact Me',
+        label:'About/Contact Me',
         icon: <AccountCircleIcon color='third'/>,
         path: 'about'
     },

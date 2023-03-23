@@ -18,6 +18,8 @@ import RestartAltIcon from "@mui/icons-material/RestartAlt";
 import { ServiceCatArrays } from "../MenuGroup/ServiceCatArrays";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import { BouncyCard } from "../Component/StyledComponent/BouncyCard";
+import { LineUpTypography } from "../Component/StyledComponent/LineUpTypography";
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
     color: "#3AA14F",
@@ -68,13 +70,42 @@ const SchedulePage = () => {
   return (
     <>
       <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: { xs: 500, md: 900, lg: 1000 },
+          backgroundSize: "cover",
+          backgroundImage: "url(./appointment.png)",
+          backgroundAttachment: "fixed",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <BouncyCard
+          sx={{
+            backgroundColor: "white",
+            opacity: 0.7,
+            width: { xs: "100%", md: "50%" },
+            flexWrap: "wrap",
+            padding: 10,
+          }}
+        >
+          <LineUpTypography align="center" color={"black"}>
+            Let's make sure connect together!
+          </LineUpTypography>
+        </BouncyCard>
+      </Box>
+      <Box
         display="flex"
         justifyContent="center"
         paddingTop="60px"
         backgroundColor="#dcdcdc"
+        mb={8}
       >
         <MySheet
-          sx={{ width: { xs: "80%", md: "40%" } }}
+          sx={{ width: { xs: "80%", md: "40%", } }}
           subject="Schedule A Call"
         >
           <Grid container sx={{ width: { xs: "90%" } }} spacing={4}>
@@ -208,7 +239,7 @@ const SchedulePage = () => {
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             sx={{
               "& .MuiSnackbarContent-root": {
-                background: '#D32F2F',
+                background: "#D32F2F",
               },
             }}
             sever
