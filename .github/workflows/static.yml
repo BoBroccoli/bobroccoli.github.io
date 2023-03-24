@@ -38,10 +38,6 @@ jobs:
         with:
           node-version: 18
           path: '.'
-      - name: Install
-        run: npm i
-      - name: Run
-        run: npm start
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
