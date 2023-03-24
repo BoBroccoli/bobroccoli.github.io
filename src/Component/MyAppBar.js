@@ -86,7 +86,7 @@ export default function MyAppBar(props) {
               <Link
                 variant="h6"
                 underline="none"
-                href="/"
+                href="/home"
                 sx={{ fontSize: 30 }}
               >
                 {"BoBroccoli"}
