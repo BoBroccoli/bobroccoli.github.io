@@ -1,7 +1,7 @@
 import React from "react";
-import { ClickAwayListener, IconButton, Typography } from "@mui/material";
+import { ClickAwayListener, IconButton } from "@mui/material";
 import Drawer from "@mui/material/Drawer";
-import { styled, useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material/styles";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";

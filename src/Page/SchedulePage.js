@@ -79,8 +79,6 @@ const SchedulePage = () => {
           backgroundSize: "cover",
           backgroundImage: "url(./appointment.png)",
           backgroundAttachment: "fixed",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
         <BouncyCard

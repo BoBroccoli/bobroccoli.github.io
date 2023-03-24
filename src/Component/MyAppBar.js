@@ -13,12 +13,10 @@ import BackToTopButton from "./SubComponent/BackToTopButton";
 import ScrollToHide from "./SubComponent/ScrollToHide";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import { Mail } from "@mui/icons-material";
-
-const rightLink = {
-  fontSize: 16,
-  ml: 3,
-};
+// const rightLink = {
+//   fontSize: 16,
+//   ml: 3,
+// };
 const style = {
   position: "absolute",
   top: "50%",

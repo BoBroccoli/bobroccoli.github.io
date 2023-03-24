@@ -1,4 +1,4 @@
-import { Box, Typography, styled } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { BouncyCard } from "./StyledComponent/BouncyCard";
 import { LineUpTypography } from "./StyledComponent/LineUpTypography";

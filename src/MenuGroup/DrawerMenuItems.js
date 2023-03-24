@@ -1,7 +1,6 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import HouseIcon from '@mui/icons-material/House';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 export const DrawerMenuItems = [
     {
