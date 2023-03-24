@@ -21,7 +21,6 @@ root.render(
       <Toolbar id="back-to-top-anchor" sx={{backgroundColor: theme.palette.bg_secondary.main}}/>
       <MyAppBar />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
         <Route path="home" element={<Home />}></Route>
         <Route path="code" element={<CodeServicePage />}></Route>
         <Route path="car" element={<CarServicePage />}></Route>
