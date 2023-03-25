@@ -1,9 +1,11 @@
-import { Grid, IconButton, Link, Typography } from "@mui/material";
+import { Button, Grid, IconButton, Link, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
+import { useNavigate } from "react-router";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Box sx={{ display: "flex", width: "100%", backgroundColor: "#585858" }}>
@@ -48,9 +50,9 @@ const Footer = () => {
               <Link p={2} variant="h6" href="/">
                 {"My Services"}
               </Link>
-              <Link p={2} variant="h6" href="/about">
+              <Button p={2} variant="h6" onClick={() => {navigate('about'); window.scrollTo({top: 0, behavior: 'smooth'})}} sx={{ color: "white", fontSize: "large" }}>
                 {"About Me"}
-              </Link>
+              </Button>
             </Box>
           </Grid>
           <Grid item xs={12} md={4}>
@@ -61,12 +63,12 @@ const Footer = () => {
               justifyContent={"flex-end"}
               height="70%"
             >
-              <Link p={2} variant="h6" href="/about">
+              <Button p={2} variant="h6" onClick={() => {navigate('about'); window.scrollTo({top: 0, behavior: 'smooth'})}} sx={{ color: "white", fontSize: "large" }}>
                 {"Contact"}
-              </Link>
-              <Link p={2} variant="h6" href="/schedule">
+              </Button>
+              <Button p={2} variant="h6" onClick={() => {navigate('schedule'); window.scrollTo({top: 0, behavior: 'smooth'})}} sx={{ color: "white", fontSize: "large" }}>
                 {"Schedule"}
-              </Link>
+              </Button>
             </Box>
           </Grid>
         </Grid>
