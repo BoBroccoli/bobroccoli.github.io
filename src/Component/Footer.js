@@ -45,7 +45,7 @@ const Footer = () => {
               justifyContent={"flex-end"}
               height="70%"
             >
-              <Link p={2} variant="h6" href="/home">
+              <Link p={2} variant="h6" href="/">
                 {"My Services"}
               </Link>
               <Link p={2} variant="h6" href="/about">

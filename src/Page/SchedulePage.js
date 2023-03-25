@@ -75,7 +75,7 @@ const SchedulePage = () => {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          height: { xs: 500, md: 900, lg: 1000 },
+          height: { xs: 800, md: 900, lg: 1000 },
           backgroundSize: "cover",
           backgroundImage: "url(./appointment.png)",
           backgroundAttachment: "fixed",
@@ -85,7 +85,7 @@ const SchedulePage = () => {
           sx={{
             backgroundColor: "white",
             opacity: 0.7,
-            width: { xs: "100%", md: "50%" },
+            width: { xs: "90%", md: "50%" },
             flexWrap: "wrap",
             padding: 10,
           }}

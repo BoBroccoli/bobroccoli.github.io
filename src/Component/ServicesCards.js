@@ -47,7 +47,7 @@ const ServicesCards = () => {
             backgroundImage: "url(./coding_bg.png)",
             backgroundSize: "cover",
             width: "100%",
-            height: { xs: 400, md: 900, lg: 1000 },
+            height: { xs: 800, md: 900, lg: 1000 },
             backgroundRepeat: "no-repeat",
           }}
         >
@@ -55,7 +55,7 @@ const ServicesCards = () => {
             sx={{
               backgroundColor: "white",
               opacity: 0.7,
-              width: { xs: "100%", md: "50%" },
+              width: { xs: "90%", md: "50%" },
               flexWrap: "wrap",
               padding: 10,
             }}
