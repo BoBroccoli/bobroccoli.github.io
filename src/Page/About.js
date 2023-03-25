@@ -56,7 +56,7 @@ const About = () => {
           mt: {xs: 10, md: 0},
           flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-around",
-          width: "100%",
+          width: "90%",
         }}
       >
         <MyTimeline />

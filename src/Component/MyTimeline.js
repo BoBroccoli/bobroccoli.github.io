@@ -51,7 +51,7 @@ export default function MyTimeline() {
             sx={{ py: "12px", px: 2, width: { xs: "auto", sm: "400px" } }}
           >
             <MyTypography variant="h5" component="span">
-              University of Minnesota
+              UMD
             </MyTypography>
             <MyTypography variant="subtitle1">
               Graduated Computer Science (B.S.)
@@ -75,7 +75,7 @@ export default function MyTimeline() {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <MyTypography variant="h5" component="span">
-              University of Minnesota
+              UMD
             </MyTypography>
             <MyTypography variant="subtitle1">
               Graduated Computer Science (M.S.)
@@ -139,7 +139,7 @@ export default function MyTimeline() {
             variant="h6"
             color="#3AA14F"
           >
-            05-02-2022
+            02-27-2022
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
@@ -150,7 +150,7 @@ export default function MyTimeline() {
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <MyTypography variant="h5" component="span">
-              OnDeck
+              {/* OnDeck */}
             </MyTypography>
             <MyTypography variant="subtitle1">
               Senior Software Engineer
