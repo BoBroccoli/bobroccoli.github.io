@@ -13,7 +13,7 @@ const CodeServicePage = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Stack spacing={10} mt={10} mb={10}>
+      <Stack spacing={{xs: 1,md:10}} mt={10} mb={10}>
         <Divider>
           <Typography variant="h3" color="#3AA14F" align="center">
             Current Projects
@@ -37,6 +37,7 @@ const CodeServicePage = () => {
             sx={{
               width: { xs: "80%", md: "40%" },
               position: "relative",
+              top: {xs: "-70px"},
               left: { md: "-10%" },
               backgroundColor: "#3AA14F",
               p: 3,
@@ -62,6 +63,7 @@ const CodeServicePage = () => {
             sx={{
               width: { xs: "80%", md: "40%" },
               position: "relative",
+              top: {xs: "70px"},
               left: { md: "10%" },
               backgroundColor: "#3AA14F",
               p: 3,
