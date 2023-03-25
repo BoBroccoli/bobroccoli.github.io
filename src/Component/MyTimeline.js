@@ -139,7 +139,7 @@ export default function MyTimeline() {
             variant="h6"
             color="#3AA14F"
           >
-            02-27-2022
+            02-27-2023
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
