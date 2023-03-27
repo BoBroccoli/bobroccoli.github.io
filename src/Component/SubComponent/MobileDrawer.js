@@ -83,7 +83,7 @@ const MobileDrawer = (props) => {
         <List>
           {DrawerMenuItems.slice(0, 3).map((item) => (
             <ListItem key={item.id} disablePadding>
-              <ListItemButton onClick={() => {navigate(item.path)}}>
+              <ListItemButton onClick={() => {navigate(item.path); props.setDrawOpen(false)}}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.label} />
               </ListItemButton>
@@ -94,7 +94,7 @@ const MobileDrawer = (props) => {
         <List>
           {DrawerMenuItems.slice(3, 4).map((item) => (
             <ListItem key={item.id} disablePadding>
-              <ListItemButton onClick={() => {navigate(item.path)}}>
+              <ListItemButton onClick={() => {navigate(item.path); props.setDrawOpen(false)}}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.label} />
               </ListItemButton>

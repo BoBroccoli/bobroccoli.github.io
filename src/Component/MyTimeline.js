@@ -2,10 +2,8 @@ import React from "react";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
-import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
 import { Avatar, Box, Divider, Paper, styled } from "@mui/material";
 
@@ -25,7 +23,7 @@ export default function MyTimeline() {
     >
       <Box width="95%" marginTop={2}>
         <Divider>
-          <Typography variant="h4" color="black">
+          <Typography variant={{ xs: "h5", md: "h4" }} color="black">
             Education and Career
           </Typography>
         </Divider>
@@ -41,11 +39,7 @@ export default function MyTimeline() {
             05-10-2014
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary" variant="outlined">
-              <Avatar alt="M" src="/umn.jfif" sx={{ width: 75, height: 75 }} />
-            </TimelineDot>
-            <TimelineConnector />
+            <Avatar alt="M" src="/umn.jfif" sx={{ width: 75, height: 75 }} />
           </TimelineSeparator>
           <TimelineContent
             sx={{ py: "12px", px: 2, width: { xs: "auto", sm: "400px" } }}
@@ -66,13 +60,9 @@ export default function MyTimeline() {
           >
             07-20-2019
           </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary" variant="outlined">
-              <Avatar alt="M" src="/umn.jfif" sx={{ width: 75, height: 75 }} />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
+
+          <Avatar alt="M" src="/umn.jfif" sx={{ width: 75, height: 75 }} />
+
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <MyTypography variant="h5" component="span">
               UMD
@@ -92,15 +82,11 @@ export default function MyTimeline() {
             10-24-2019
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary" variant="outlined">
-              <Avatar
-                alt="M"
-                src="/gartner.jfif"
-                sx={{ width: 75, height: 75 }}
-              />
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
+            <Avatar
+              alt="M"
+              src="/gartner.jfif"
+              sx={{ width: 75, height: 75 }}
+            />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <MyTypography variant="h5" component="span">
@@ -119,11 +105,7 @@ export default function MyTimeline() {
             05-02-2022
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-            <TimelineDot color="primary" variant="outlined">
-              <Avatar alt="M" src="/meta.jfif" sx={{ width: 75, height: 75 }} />
-            </TimelineDot>
-            <TimelineConnector />
+            <Avatar alt="M" src="/meta.jfif" sx={{ width: 75, height: 75 }} />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <MyTypography variant="h5" component="span">
@@ -142,11 +124,7 @@ export default function MyTimeline() {
             02-27-2023
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "secondary.main" }} />
-            <TimelineDot color="primary" variant="outlined">
-              <Avatar alt="M" src="/od.jfif" sx={{ width: 75, height: 75 }} />
-            </TimelineDot>
-            <TimelineConnector />
+            <Avatar alt="M" src="/od.jfif" sx={{ width: 75, height: 75 }} />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
             <MyTypography variant="h5" component="span">
