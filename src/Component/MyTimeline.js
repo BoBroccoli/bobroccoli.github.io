@@ -48,7 +48,7 @@ export default function MyTimeline() {
               UMD
             </MyTypography>
             <MyTypography variant="subtitle1">
-              Graduated Computer Science (B.S.)
+              Computer Science
             </MyTypography>
           </TimelineContent>
         </TimelineItem>
@@ -68,7 +68,7 @@ export default function MyTimeline() {
               UMD
             </MyTypography>
             <MyTypography variant="subtitle1">
-              Graduated Computer Science (M.S.)
+              Computer Science
             </MyTypography>
           </TimelineContent>
         </TimelineItem>
