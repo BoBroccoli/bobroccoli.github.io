@@ -21,7 +21,7 @@ const ServicesCards = () => {
     "Whether it's for personal use or business, I am here to help you create a website that meets your unique needs and requirements. Let's take your online presence to the next level! Contact me for more information on how I can help you build the website of your dreams.";
   const teachingCardTitle = "Car Project";
   const teachingCardContent =
-    "I offer a comprehensive coding assistant service that covers everything from data structures to interview preparation. My goal is to help you strengthen your coding abilities and achieve your career aspirations. With my expertise and personalized approach, I am confident that I can help you reach your full potential. Let's work together to enhance your coding skills and advance your career.";
+    "I have worked on many car projects and I love working on cars. If you around Stamford, CT area, I can help you get things replaced or repaired at your place.";
   const converstationCardTitle = "Conversation";
   const converstationCardContent =
     "Of course, anything you want to share, any new technologies you learned which is cool, I love to hear and have conversation with you.";

@@ -23,12 +23,12 @@ export default function MyTimeline() {
     >
       <Box width="95%" marginTop={2}>
         <Divider>
-          <Typography variant={{ xs: "h5", md: "h4" }} color="black">
+          <Typography variant="h4" color="black">
             Education and Career
           </Typography>
         </Divider>
       </Box>
-      <Timeline position="alternate" sx={{ width: "95%" }}>
+      <Timeline sx={{ width: "95%" }}>
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
