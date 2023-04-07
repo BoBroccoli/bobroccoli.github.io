@@ -7,4 +7,4 @@ npm i react-render-if-visible
 npm install @mui/lab @mui/material
 
 
-npm run build -- run the github action and build github
+npm run deploy -- run the github action and build github
