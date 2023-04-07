@@ -1,11 +1,4 @@
-import {
-  Box,
-  Button,
-  Divider,
-  Paper,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Divider, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +6,7 @@ const CodeServicePage = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Stack spacing={{xs: 1,md:10}} mt={10} mb={10}>
+      <Stack spacing={{ xs: 1, md: 10 }} mt={10} mb={10}>
         <Divider>
           <Typography variant="h3" color="#3AA14F" align="center">
             Current Projects
@@ -37,7 +30,7 @@ const CodeServicePage = () => {
             sx={{
               width: { xs: "80%", md: "40%" },
               position: "relative",
-              top: {xs: "-70px"},
+              top: { xs: "-70px" },
               left: { md: "-10%" },
               backgroundColor: "#3AA14F",
               p: 3,
@@ -63,7 +56,7 @@ const CodeServicePage = () => {
             sx={{
               width: { xs: "80%", md: "40%" },
               position: "relative",
-              top: {xs: "70px"},
+              top: { xs: "70px" },
               left: { md: "10%" },
               backgroundColor: "#3AA14F",
               p: 3,
@@ -73,9 +66,8 @@ const CodeServicePage = () => {
               Create Connection
             </Typography>
             <Typography variant="body1" color={"white"} sx={{ p: 3 }}>
-              Help you connect to experienced professional from many companies
-              like Google, Meta, Amazon. Understand what they do and what
-              technologies they use.
+              Help you connect to experienced professional from many companies.
+              Understand what they do and what technologies they use.
             </Typography>
           </Paper>
           <Box

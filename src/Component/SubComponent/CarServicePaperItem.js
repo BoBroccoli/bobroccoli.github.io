@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
+import { useNavigate } from "react-router";
 
 const CarServicePaperItem = (props) => {
   const img_url = props.img_url;
@@ -16,6 +17,7 @@ const CarServicePaperItem = (props) => {
   const content = props.content;
   const external_link = props.external_link;
   const link_title = props.link_title;
+  const navigate = useNavigate();
   return (
     <Paper elevation={4} sx={{ p: 2, m: 5, width: {xs:"80%", md:"60%"} }}>
       <Grid container >
@@ -26,6 +28,7 @@ const CarServicePaperItem = (props) => {
           sx={{
             display: "flex",
             justifyContent: "center",
+            alignItems: 'center',
           }}
         >
           <Box
@@ -68,7 +71,7 @@ const CarServicePaperItem = (props) => {
         </Grid>
         <Grid item xs={12} lg={2} sx={{display:'flex', alignItems:'center', justifyContent:'center'}}>
             <Box display="flex">
-              <Button variant="outlined" size="small" sx={{color: '#3AA14F', borderColor: '#3AA14F', '&:hover': {borderColor: "#3AA14F"} }} startIcon={<AddCircleIcon />}>
+              <Button onClick={() => {navigate('/schedule');}} variant="outlined" size="small" sx={{color: '#3AA14F', borderColor: '#3AA14F', '&:hover': {borderColor: "#3AA14F"} }} startIcon={<AddCircleIcon />}>
                 Quote
               </Button>
           </Box>
