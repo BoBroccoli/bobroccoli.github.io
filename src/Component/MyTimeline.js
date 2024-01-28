@@ -28,7 +28,7 @@ export default function MyTimeline() {
           </Typography>
         </Divider>
       </Box>
-      <Timeline sx={{ width: "95%" }}>
+      <Timeline sx={{ width: "95%", justifyContent: "space-around"}}>
         <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: "auto 0" }}
@@ -112,27 +112,6 @@ export default function MyTimeline() {
               Meta
             </MyTypography>
             <MyTypography variant="subtitle1">Software Engineer</MyTypography>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0" }}
-            align="right"
-            variant="h6"
-            color="#3AA14F"
-          >
-            02-27-2023
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <Avatar alt="M" src="/od.jfif" sx={{ width: 75, height: 75 }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <MyTypography variant="h5" component="span">
-              {/* OnDeck */}
-            </MyTypography>
-            <MyTypography variant="subtitle1">
-              Senior Software Engineer
-            </MyTypography>
           </TimelineContent>
         </TimelineItem>
       </Timeline>
