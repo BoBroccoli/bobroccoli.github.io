@@ -40,8 +40,7 @@ const CodeServicePage = () => {
               Build Website
             </Typography>
             <Typography variant="body1" color={"white"} sx={{ p: 3 }}>
-              Customize website for your portforlio or your business with as low
-              as $25/month.
+              I am helping you to build website for free!
             </Typography>
           </Paper>
         </Box>
